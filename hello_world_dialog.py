@@ -11,7 +11,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_HelloWorldDialogBase(object):
     def setupUi(self, HelloWorldDialogBase):
         HelloWorldDialogBase.setObjectName("HelloWorldDialogBase")
-        HelloWorldDialogBase.resize(477, 235)
+        HelloWorldDialogBase.resize(825, 346)
         self.gridLayout_2 = QtWidgets.QGridLayout(HelloWorldDialogBase)
         self.gridLayout_2.setObjectName("gridLayout_2")
         self.gridLayout = QtWidgets.QGridLayout()
@@ -23,8 +23,12 @@ class Ui_HelloWorldDialogBase(object):
         self.comboBox.setObjectName("comboBox")
         self.messageLayout.addWidget(self.comboBox)
         self.messageBox = QtWidgets.QLineEdit(HelloWorldDialogBase)
+        self.messageBox.setText("")
         self.messageBox.setObjectName("messageBox")
         self.messageLayout.addWidget(self.messageBox)
+        self.pushButton = QtWidgets.QPushButton(HelloWorldDialogBase)
+        self.pushButton.setObjectName("pushButton")
+        self.messageLayout.addWidget(self.pushButton)
         self.gridLayout.addLayout(self.messageLayout, 2, 0, 1, 1)
         self.button_box = QtWidgets.QDialogButtonBox(HelloWorldDialogBase)
         self.button_box.setOrientation(QtCore.Qt.Horizontal)
@@ -42,5 +46,5 @@ class Ui_HelloWorldDialogBase(object):
     def retranslateUi(self, HelloWorldDialogBase):
         _translate = QtCore.QCoreApplication.translate
         HelloWorldDialogBase.setWindowTitle(_translate("HelloWorldDialogBase", "Hello World"))
-        self.messageBox.setText(_translate("HelloWorldDialogBase", "Messages: None"))
+        self.pushButton.setText(_translate("HelloWorldDialogBase", "Hello?"))
 
