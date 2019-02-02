@@ -18,14 +18,14 @@ if __name__ == '__main__':
 
     # make the "Hello?" push button do something
 
-    def hello():  # SLOT
+    def hello():  # HERE IS THE SLOT
 
         if helloWorld.messageBox.text() == "":
             helloWorld.messageBox.setText("Hello, World!")
         else:
             helloWorld.messageBox.setText("")
 
-    helloWorld.pushButton.clicked.connect(hello)  # SIGNAL
+    helloWorld.pushButton.clicked.connect(hello)  # HERE IS THE SIGNAL
 
     window.show()
     sys.exit(app.exec_())
